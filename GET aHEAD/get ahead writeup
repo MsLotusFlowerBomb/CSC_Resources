@@ -1,0 +1,12 @@
+
+Description
+Find the flag being held on this server to get ahead of the competition http://mercury.picoctf.net:21939/
+
+solution:
+immediately I'm thing a GET REQUEST and maybe head files... lets look at source code.
+2. there is a index.php with get method, lets see...
+3. lets use burp and see what is happening.
+4. being a noob sucks. so i need to understand get requests.
+5. So i need to repeat the get request and instead of GET i replace with HEAD and flag will show. 
+
+6. wow. picoCTF{r3j3ct_th3_du4l1ty_6ef27873}

@@ -1,0 +1,9 @@
+HEAD-DUMP
+Welcome to the challenge! In this challenge, you will explore a web application and find an endpoint that exposes a file containing a hidden flag. The application is a simple blog website where you can read articles about various topics, including an article about API Documentation. Your goal is to explore the application and find the endpoint that generates files holding the server’s memory, where a secret flag is hidden.
+
+1. judging by title, i may have to get into the head or file dumps.
+2. hints are the articles. and file dumps.
+2. lets look at the source code
+3. i opened API documentation and clicked get heapdump
+5. a huge file! saved it and opening it was a mistake, so lets grep.
+6. grep 'picoCTF' and found the flag. icoCTF{Pat!3nt_15_Th3_K3y_bed6b6b8}

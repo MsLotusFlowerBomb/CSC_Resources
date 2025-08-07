@@ -1,0 +1,23 @@
+
+Description
+Try to decrypt the secret cheese password to prove you're not the imposter! Connect to the program on our server: nc verbal-sleep.picoctf.net 52468
+
+hint: Remember that cipher we devised together Squeexy? The one that incorporates your affinity for linear equations???
+
+SOLUTION
+
+ok, we are talking about cheese... we are provided a cipher we choose to guess or encrypt,
+- i encrypt a cheese CHEDDAR
+-im provided a encrypted cipher.
+- hint talks about affinity and linear equations... AFFINE CIPHER
+- open dcode, we need to find A and B...
+- decode the encrypted cypher we just created and bruteforce it...
+- the correct answer will provide the likely A and B coefficients, now decode original cipher and guess: flagill be revealed.
+
+picoCTF{ChEeSyda811b6e}
+ 
+
+
+PART 2
+
+

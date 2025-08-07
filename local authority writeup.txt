@@ -1,0 +1,10 @@
+LOCAL AUTHORITY
+Get the flag, hint how do passwords get validated.
+1. source code shows a post request and login.php
+there is a js script that runs admin hash... interesting
+2. lets run burp
+3.unbelievable, secure.js check password function has the login details in plain text.
+
+username === 'admin' && password === 'strongPassword098765'
+
+4. logged in and here is my flag:  picoCTF{j5_15_7r4n5p4r3n7_a8788e61} 

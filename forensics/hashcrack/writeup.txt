@@ -1,0 +1,33 @@
+Description
+Description
+A company stored a secret message on a server which got breached due to the admin using weakly hashed passwords. Can you gain access to the secret stored within the server? 
+
+Access the server using nc verbal-sleep.picoctf.net 53299
+
+so i was provided this hash: 482c811da5d5b4bc6d497ffa98491e38
+
+i used hasid to identify as MD5
+- I opened up wordlists and extracted rockyou.txt 
+- i opened up hashcat and used rockyou.txt to attack the hash.
+ 
+$hashcat -a 0 482c811da5d5b4bc6d497ffa98491e38 ./usr/share/wordlists/rockyou.txt
+--i need to move the rockyou file in sudo mode:
+$ sudo mv /usr/share/wordlists/rockyou.txt ~/Documents/CSC/forensics/hashcrack
+
+--great now run the attack again and wait.
+-- i received an error because I forgot to include the hash mode, lets try again...
+	$ hashcat -a 0 -m 0 482c811da5d5b4bc6d497ffa98491e38 ./rockyou.txt
+
+IT TAKES TIME!
+
+*use --show to reveal the password
+
+i got password123 which gave me another hash...(sha1) 
+i got letmein which gave a longer hash (sha256)
+
+finally flag revealed as : picoCTF{UseStr0nG_h@shEs_&PaSswDs!_23622a7e}
+
+source:
+hashcrack
+hash.com
+https://medium.com/@sparshladani/picoctf-challenges-hashcrack-09fddae4bb9b

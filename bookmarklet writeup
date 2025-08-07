@@ -1,0 +1,10 @@
+BOOKMARKLET
+
+so we need to find the flag which is encrypted. upon inspection, source code reveals a js function to decrypt the flag and display as an alert.
+2. I need to run this script. but how?
+3. i'm guessing this has something to do with bookmarks, let me research.
+4. upon research i found that you can run js  scripts directly in the url when adding a new bookmark... let me try.
+
+5. I added a new bookmark named bookmarklet, pasted the clipboard content in url and saved and alert with flag popped up.
+
+picoCTF{p@g3_turn3r_1d1ba7e0}

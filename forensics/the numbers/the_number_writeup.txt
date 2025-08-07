@@ -1,0 +1,8 @@
+Description
+The numbers... what do they mean?
+
+hint: The flag is in the format PICOCTF{}
+
+so the image shows numbers, 
+extracted those numbers and identified the cipher AZ127 cipher every number correlates to a alphabet,
+so i decoded and this is the flag: PICOCTF{THENUMBERSMASON}

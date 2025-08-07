@@ -1,0 +1,7 @@
+UNMINIFY
+I don't like scrolling down to read the code of my website, so I've squished it. As a bonus, my pages load faster!
+
+1. initially i thought im looking for a zip or tar file, so i viewed page source
+
+2. code had picoctf{} as a class and all code was on one line so i went through it.
+flag was a class name in ascii. easy
